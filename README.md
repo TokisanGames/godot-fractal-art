@@ -8,7 +8,7 @@ What sets this fractal generator apart from others is that you can control the J
 ![Julia screenshot](screenshots/julia2.gif)
 ![Mandelbrot screenshot](screenshots/mandelbrot1.gif)
 
-## How to use
+## How To Use
 All the keys are in the menu. Here are some highlights:
 * Pan with click+drag, zoom with the wheel.
 * On the Julia set, press 's' to change the seed with mouse control to get the cool animated effects. Hold SHIFT or CTRL to slow down the movement. Press 's' to lock the seed in place.
@@ -19,7 +19,7 @@ All the keys are in the menu. Here are some highlights:
 ![Menu](screenshots/menu.png)
 
 
-## How to colorize
+## How To Colorize
 ### Color Method #1 - More complex, but more interesting
 * This function uses sine waves for each of Red, Green and Blue. You can change the frequency, or number of cycles from the top of the fractal (the outside) to the bottom (the inside, down to the iteration count), as well as the phase, or starting position of the cycles.
 * The sliders on the left dictate the frequency, or the number of times that color goes from black to full color, up to a maximum of 6. 
@@ -47,4 +47,4 @@ Also, you can click a slider then use your arrow keys for more control.
 
 
 ## Limitations
-You can only zoom in so far before you start seeing blocky results. Godot only supports single precision shaders currently. Perhaps when they support double precision, we can zoom in further. I attempted to implement double precision, and while this tremendously lowered my framerate, it did not increase the resolution. This work is in materials/mandelbrot-double.shader and .material. 
+You can only zoom in to a scale of around 20,000-100,000 before you start seeing blocky results. Godot only supports single precision shaders currently. Perhaps when they support double precision, we can zoom in further. I attempted to implement emulated double precision, and while this tremendously lowered my framerate, it did not increase the resolution. The experiment can be found in materials/mandelbrot-double.shader and .material. 
