@@ -19,4 +19,4 @@ All the keys are in the menu. Here are some highlights:
 
 
 ## Limitations
-* You can only zoom in so far before you start seeing blocky results. Godot only supports single precision shaders currently. Perhaps when they support double precision, we can zoom in further. I attempted to implement double precision, and while this tremendously lowered my framerate, it did not increase the resolution. The files are 
+* You can only zoom in so far before you start seeing blocky results. Godot only supports single precision shaders currently. Perhaps when they support double precision, we can zoom in further. I attempted to implement double precision, and while this tremendously lowered my framerate, it did not increase the resolution. This work is in materials/mandelbrot-double.shader and .material. 
