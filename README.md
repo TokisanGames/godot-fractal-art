@@ -14,7 +14,7 @@ All the keys are in the menu. Here are some highlights:
 * On the Julia set, press 's' to change the seed with mouse control to get the cool animated effects. Press 's' to lock the seed in place.
 * Escape will show and hide the menu. The keys work when the menu is hidden.
 * The Mandelbrot equation is Z[n+1] = Z[n]^2 + c. Try increasing or decreasing the Power for some interesting results, even going negative! The squared algorithm is optimized. All other powers are slower.
-* Iterations determines how far down into the set it calculates. More iterations is slower.
+* Iterations determines how far down into the set it calculates. More iterations are slower.
 
 ![Menu](screenshots/menu.png)
 
