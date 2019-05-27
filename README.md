@@ -6,7 +6,7 @@ What sets this fractal generator apart from others is that you can control the j
 
 ![Julia screenshot](screenshots/julia1.gif)
 ![Julia screenshot](screenshots/julia2.gif)
-![Mandelbrot screenshot](screeenshots/mandelbrot1.gif)
+![Mandelbrot screenshot](screenshots/mandelbrot1.gif)
 
 ## How to use
 All the keys are in the menu. Here are some highlights:
@@ -14,7 +14,7 @@ All the keys are in the menu. Here are some highlights:
 * On the Julia set, press 's' to change the seed with mouse control to get the cool animated effects. Press 's' to lock the seed in place.
 * Escape will show and hide the menu.
 
-![Menu](master/screeenshots/menu.gif)
+![Menu](screenshots/menu.gif)
 
 
 
