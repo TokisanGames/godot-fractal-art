@@ -4,9 +4,9 @@ This project generates the Mandelbrot and Julia fractal sets using shaders and t
 
 What sets this fractal generator apart from others is that you can control the julia seed with mouse movement and watch some interesting visual effects.
 
-![Julia screenshot](screenshots/julia11.gif)
-![Julia screenshot](screenshots/julia12.gif)
-![Mandelbrot screenshot](screenshots/mandelbrot1.gif)
+![Julia screenshot](https://github.com/tinmanjuggernaut/godot-fractals/blob/master/screeenshots/julia1.gif)
+![Julia screenshot](https://github.com/tinmanjuggernaut/godot-fractals/blob/master/screenshots/julia12.gif)
+![Mandelbrot screenshot](https://github.com/tinmanjuggernaut/godot-fractals/blob/master/screeenshots/mandelbrot1.gif)
 
 ## How to use
 All the keys are in the menu. Here are some highlights:
@@ -14,7 +14,7 @@ All the keys are in the menu. Here are some highlights:
 * On the Julia set, press 's' to change the seed with mouse control to get the cool animated effects. Press 's' to lock the seed in place.
 * Escape will show and hide the menu.
 
-![Menu](screenshots/menu.gif)
+![Menu](https://github.com/tinmanjuggernaut/godot-fractals/blob/master/screeenshots/menu.gif)
 
 
 
