@@ -14,7 +14,7 @@ All the keys are in the menu. Here are some highlights:
 * On the Julia set, press 's' to change the seed with mouse control to get the cool animated effects. Press 's' to lock the seed in place.
 * Escape will show and hide the menu.
 
-![Menu](screenshots/menu.gif)
+![Menu](screenshots/menu.png)
 
 
 
