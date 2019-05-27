@@ -1,6 +1,6 @@
 # Godot Fractals
 
-This project generates the Mandelbrot and Julia fractal sets using shaders and the Godot Engine.
+This project generates the Mandelbrot and Julia fractal sets using shaders and the Godot Engine 3.x.
 
 What sets this fractal generator apart from others is that you can control the Julia seed with mouse movement and watch some interesting visual effects.
 
