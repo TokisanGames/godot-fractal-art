@@ -100,7 +100,7 @@ func _input(event) -> void:
 		if(event.pressed):
 			var PP = UI.find_node("PickPanel")
 			if( !( (UI.visible && event.position.x <= UI.rect_size.x && event.position.y <= UI.rect_size.y) ||
-			    (PP.visible && event.position.x <= UI.rect_size.x + PP.rect_size.x && event.position.y <= PP.rect_size.y) ) ):
+				(PP.visible && event.position.x <= UI.rect_size.x + PP.rect_size.x && event.position.y <= PP.rect_size.y) ) ):
 				# If mouse clicked and not within the UI if visible
 				mouse_sets_position = true
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -176,7 +176,8 @@ func _input(event) -> void:
 		UI.find_node("FullScreen").pressed = !OS.is_window_fullscreen()
 		OS.set_window_fullscreen(!OS.is_window_fullscreen())
 
-	elif(checkKey(event, KEY_ESCAPE)):
+	elif(checkKey(event, KEY_ESCAPE) or
+		(event is InputEventMouseButton and event.button_index == BUTTON_RIGHT and event.pressed)):
 		UI.visible = ! UI.visible
 		UI.find_node("Mandelbrot Button").grab_focus()
 		

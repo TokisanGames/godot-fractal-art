@@ -13,10 +13,36 @@ margin_left = 10.0
 margin_right = 310.0
 margin_bottom = 635.0
 
-[node name="FullScreenBlock" type="HBoxContainer" parent="Menu"]
-editor/display_folded = true
+[node name="HSeparator4" type="HSeparator" parent="Menu"]
+modulate = Color( 1, 1, 1, 0 )
 margin_right = 300.0
-margin_bottom = 40.0
+margin_bottom = 4.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu"]
+margin_top = 8.0
+margin_right = 300.0
+margin_bottom = 28.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="Menu/HBoxContainer"]
+margin_right = 148.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Quit"
+
+[node name="HideButton" type="Button" parent="Menu/HBoxContainer"]
+margin_left = 152.0
+margin_right = 300.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+text = "Hide"
+
+[node name="FullScreenBlock" type="HBoxContainer" parent="Menu"]
+margin_top = 32.0
+margin_right = 300.0
+margin_bottom = 72.0
 
 [node name="Full screen label" type="Label" parent="Menu/FullScreenBlock"]
 margin_top = 13.0
@@ -33,9 +59,9 @@ margin_bottom = 40.0
 size_flags_horizontal = 3
 
 [node name="ColorBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 44.0
+margin_top = 76.0
 margin_right = 300.0
-margin_bottom = 60.0
+margin_bottom = 92.0
 
 [node name="ColorLabel" type="Label" parent="Menu/ColorBlock"]
 margin_top = 1.0
@@ -56,9 +82,9 @@ value = 1.0
 ticks_on_borders = true
 
 [node name="RedBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 64.0
+margin_top = 96.0
 margin_right = 300.0
-margin_bottom = 84.0
+margin_bottom = 116.0
 
 [node name="RedLabel" type="Label" parent="Menu/RedBlock"]
 margin_top = 3.0
@@ -93,9 +119,9 @@ value = 4.7
 ticks_on_borders = true
 
 [node name="GreenBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 88.0
+margin_top = 120.0
 margin_right = 300.0
-margin_bottom = 108.0
+margin_bottom = 140.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="GreenLabel" type="Label" parent="Menu/GreenBlock"]
@@ -131,9 +157,9 @@ value = 4.7
 ticks_on_borders = true
 
 [node name="BlueBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 112.0
+margin_top = 144.0
 margin_right = 300.0
-margin_bottom = 132.0
+margin_bottom = 164.0
 rect_min_size = Vector2( 0, 20 )
 
 [node name="BlueLabel" type="Label" parent="Menu/BlueBlock"]
@@ -244,10 +270,9 @@ value = 0.05
 ticks_on_borders = true
 
 [node name="SmoothingBlock" type="HBoxContainer" parent="Menu"]
-editor/display_folded = true
-margin_top = 136.0
+margin_top = 168.0
 margin_right = 300.0
-margin_bottom = 176.0
+margin_bottom = 208.0
 
 [node name="SmoothingLabel" type="Label" parent="Menu/SmoothingBlock"]
 margin_top = 13.0
@@ -264,14 +289,14 @@ margin_bottom = 40.0
 size_flags_horizontal = 3
 
 [node name="HSeparator" type="HSeparator" parent="Menu"]
-margin_top = 180.0
+margin_top = 212.0
 margin_right = 300.0
-margin_bottom = 184.0
+margin_bottom = 216.0
 
 [node name="FractalBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 188.0
+margin_top = 220.0
 margin_right = 300.0
-margin_bottom = 218.0
+margin_bottom = 250.0
 rect_min_size = Vector2( 0, 30 )
 
 [node name="Label" type="Label" parent="Menu/FractalBlock"]
@@ -296,9 +321,9 @@ size_flags_horizontal = 3
 text = "Julia"
 
 [node name="ScaleBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 222.0
+margin_top = 254.0
 margin_right = 300.0
-margin_bottom = 246.0
+margin_bottom = 278.0
 
 [node name="ScaleLabel" type="Label" parent="Menu/ScaleBlock"]
 margin_top = 5.0
@@ -315,10 +340,9 @@ size_flags_horizontal = 3
 caret_blink = true
 
 [node name="PositionBlock" type="HBoxContainer" parent="Menu"]
-editor/display_folded = true
-margin_top = 250.0
+margin_top = 282.0
 margin_right = 300.0
-margin_bottom = 274.0
+margin_bottom = 306.0
 
 [node name="PositionLabel" type="Label" parent="Menu/PositionBlock"]
 margin_top = 5.0
@@ -347,14 +371,14 @@ size_flags_horizontal = 3
 caret_blink = true
 
 [node name="HSeparator2" type="HSeparator" parent="Menu"]
-margin_top = 278.0
+margin_top = 310.0
 margin_right = 300.0
-margin_bottom = 282.0
+margin_bottom = 314.0
 
 [node name="SeedBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 286.0
+margin_top = 318.0
 margin_right = 300.0
-margin_bottom = 310.0
+margin_bottom = 342.0
 
 [node name="SeedLabel" type="Label" parent="Menu/SeedBlock"]
 margin_top = 5.0
@@ -383,9 +407,9 @@ size_flags_horizontal = 3
 caret_blink = true
 
 [node name="PowerBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 314.0
+margin_top = 346.0
 margin_right = 300.0
-margin_bottom = 338.0
+margin_bottom = 370.0
 custom_constants/separation = 5
 
 [node name="PowerLabel" type="Label" parent="Menu/PowerBlock"]
@@ -402,9 +426,9 @@ margin_bottom = 24.0
 size_flags_horizontal = 3
 
 [node name="IterationsBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 342.0
+margin_top = 374.0
 margin_right = 300.0
-margin_bottom = 366.0
+margin_bottom = 398.0
 
 [node name="IterationsLabel" type="Label" parent="Menu/IterationsBlock"]
 margin_top = 5.0
@@ -420,9 +444,9 @@ margin_bottom = 24.0
 size_flags_horizontal = 3
 
 [node name="FPS Block" type="HBoxContainer" parent="Menu"]
-margin_top = 370.0
+margin_top = 402.0
 margin_right = 300.0
-margin_bottom = 394.0
+margin_bottom = 426.0
 rect_min_size = Vector2( 0, 24 )
 
 [node name="FPSLabel" type="Label" parent="Menu/FPS Block"]
@@ -442,34 +466,28 @@ size_flags_horizontal = 3
 text = "0"
 
 [node name="HSeparator3" type="HSeparator" parent="Menu"]
-margin_top = 398.0
+margin_top = 430.0
 margin_right = 300.0
-margin_bottom = 402.0
+margin_bottom = 434.0
 
 [node name="Instructions" type="RichTextLabel" parent="Menu"]
-margin_top = 406.0
+margin_top = 438.0
 margin_right = 300.0
-margin_bottom = 621.0
+margin_bottom = 653.0
 rect_min_size = Vector2( 300, 215 )
 text = "															 Controls
-Esc              Show/Hide this menu
-CTRL+q		Exit Program
-f				   Full screen on/off
-g				  Smoothing on/off
-Click+Drag   Pan screen
-Wheel		  Zoom
-p/P			  +/- Power
-i/I				+/- Iterations
+Esc/RMouse     Show/Hide this menu
+CTRL+q		     Exit Program
+f				        Full screen on/off 
+g		     		  Smoothing on/off
+LMouse+Drag   Pan screen
+Wheel		      Zoom
+p/P			       +/- Power
+i/I				     +/- Iterations
 															Julia Only
 s			      Mouse adjusts seed on/off
 SHIFT           Slow seed adjustment to 1/3rd
 CTRL            Slow seed adjustment to 1/10th"
-
-[node name="QuitButton" type="Button" parent="Menu"]
-margin_top = 625.0
-margin_right = 300.0
-margin_bottom = 645.0
-text = "Quit"
 
 [node name="PickPanel" type="Panel" parent="."]
 visible = false
@@ -504,7 +522,8 @@ margin_right = 4.0
 margin_bottom = 4.0
 size_flags_horizontal = 3
 edit_alpha = false
-
+[connection signal="pressed" from="Menu/HBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="Menu/HBoxContainer/HideButton" to="." method="_on_HideButton_pressed"]
 [connection signal="toggled" from="Menu/FullScreenBlock/FullScreen" to="." method="_on_FullScreen_toggled"]
 [connection signal="value_changed" from="Menu/ColorBlock/ColorMethod" to="." method="_on_ColorMethod_value_changed"]
 [connection signal="value_changed" from="Menu/RedBlock/RedFrequency" to="." method="_on_RedFrequency_value_changed"]
@@ -528,6 +547,5 @@ edit_alpha = false
 [connection signal="text_changed" from="Menu/SeedBlock/HBoxContainer/SeedY" to="." method="_on_SeedY_text_changed"]
 [connection signal="text_changed" from="Menu/PowerBlock/Power" to="." method="_on_Power_text_changed"]
 [connection signal="text_changed" from="Menu/IterationsBlock/Iterations" to="." method="_on_Iterations_text_changed"]
-[connection signal="pressed" from="Menu/QuitButton" to="." method="_on_QuitButton_pressed"]
 [connection signal="pressed" from="PickPanel/VBoxContainer/ClosePicker" to="." method="_on_ClosePicker_pressed"]
 [connection signal="color_changed" from="PickPanel/VBoxContainer/ColorPicker" to="." method="_on_ColorPicker_color_changed"]

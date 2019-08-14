@@ -216,3 +216,6 @@ func _on_Iterations_text_changed(new_text):
 func _on_QuitButton_pressed():
 	get_tree().quit()
 
+func _on_HideButton_pressed():
+	visible = ! visible
+	find_node("Mandelbrot Button").grab_focus()
