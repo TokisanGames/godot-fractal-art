@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Godot Fractals"
+config/name="Godot Fractal Art"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 window/size/width=1280
 window/size/height=720
+window/vsync/use_vsync=false
 
 [input]
 

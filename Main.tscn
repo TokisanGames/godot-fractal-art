@@ -2,16 +2,21 @@
 
 [ext_resource path="res://materials/julia.material" type="Material" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Fractal.gd" type="Script" id=3]
+[ext_resource path="res://Game.gd" type="Script" id=3]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=4]
 
-[node name="G" type="Node2D"]
-
-[node name="Fractal" type="Sprite" parent="."]
-material = ExtResource( 1 )
-position = Vector2( 639.349, 358.823 )
-scale = Vector2( 19.9361, 11.2212 )
-texture = ExtResource( 2 )
+[node name="Game" type="Node"]
 script = ExtResource( 3 )
+
+[node name="Panel" type="TextureRect" parent="."]
+material = ExtResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 6.10352e-05
+texture = ExtResource( 2 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="UI" parent="." instance=ExtResource( 4 )]
