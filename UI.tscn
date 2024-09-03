@@ -1,104 +1,90 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://dxas8w6rr810e"]
 
-[ext_resource path="res://UI.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://UI.gd" id="1"]
 
 [node name="UI" type="Panel"]
-self_modulate = Color( 1, 1, 1, 0.784314 )
-margin_right = 320.0
-margin_bottom = 656.0
-script = ExtResource( 1 )
+self_modulate = Color(1, 1, 1, 0.784314)
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 320.0
+grow_vertical = 2
+script = ExtResource("1")
 
 [node name="Menu" type="VBoxContainer" parent="."]
-margin_left = 10.0
-margin_right = 310.0
-margin_bottom = 635.0
+layout_mode = 0
+offset_left = 10.0
+offset_right = 310.0
+offset_bottom = 811.0
 
 [node name="HSeparator4" type="HSeparator" parent="Menu"]
-modulate = Color( 1, 1, 1, 0 )
-margin_right = 300.0
-margin_bottom = 4.0
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu"]
-margin_top = 8.0
-margin_right = 300.0
-margin_bottom = 28.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+layout_mode = 2
 
 [node name="QuitButton" type="Button" parent="Menu/HBoxContainer"]
-margin_right = 148.0
-margin_bottom = 20.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Quit"
 
 [node name="HideButton" type="Button" parent="Menu/HBoxContainer"]
-margin_left = 152.0
-margin_right = 300.0
-margin_bottom = 20.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Hide"
 
+[node name="FPS Block" type="HBoxContainer" parent="Menu"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="FPSLabel" type="Label" parent="Menu/FPS Block"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "FPS:"
+
+[node name="FPS" type="Label" parent="Menu/FPS Block"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 2
+
 [node name="FullScreenBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 32.0
-margin_right = 300.0
-margin_bottom = 72.0
+layout_mode = 2
 
 [node name="Full screen label" type="Label" parent="Menu/FullScreenBlock"]
-margin_top = 13.0
-margin_right = 148.0
-margin_bottom = 27.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "(F)ull Screen: "
-valign = 1
 
 [node name="FullScreen" type="CheckButton" parent="Menu/FullScreenBlock"]
-margin_left = 152.0
-margin_right = 300.0
-margin_bottom = 40.0
+layout_mode = 2
 size_flags_horizontal = 3
+button_pressed = true
 
 [node name="ColorBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 76.0
-margin_right = 300.0
-margin_bottom = 92.0
+layout_mode = 2
 
 [node name="ColorLabel" type="Label" parent="Menu/ColorBlock"]
-margin_top = 1.0
-margin_right = 148.0
-margin_bottom = 15.0
+layout_mode = 2
 size_flags_horizontal = 3
-text = "Color Method: "
+text = "Simple Color: "
 
-[node name="ColorMethod" type="HSlider" parent="Menu/ColorBlock"]
-margin_left = 152.0
-margin_right = 300.0
-margin_bottom = 16.0
-rect_min_size = Vector2( 100, 0 )
-size_flags_horizontal = 3
-min_value = 1.0
-max_value = 2.0
-value = 1.0
-ticks_on_borders = true
+[node name="ColorMethod" type="CheckButton" parent="Menu/ColorBlock"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
 
 [node name="RedBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 96.0
-margin_right = 300.0
-margin_bottom = 116.0
+layout_mode = 2
 
 [node name="RedLabel" type="Label" parent="Menu/RedBlock"]
-margin_top = 3.0
-margin_right = 148.0
-margin_bottom = 17.0
-rect_min_size = Vector2( 148, 0 )
+custom_minimum_size = Vector2(148, 0)
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Red Frequency/Phase:"
 
 [node name="RedFrequency" type="HSlider" parent="Menu/RedBlock"]
-margin_left = 152.0
-margin_right = 224.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 size_flags_horizontal = 3
 min_value = 0.1
 max_value = 6.0
@@ -107,10 +93,8 @@ value = 1.0
 ticks_on_borders = true
 
 [node name="RedPhase" type="HSlider" parent="Menu/RedBlock"]
-margin_left = 228.0
-margin_right = 300.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 size_flags_horizontal = 3
 min_value = 4.7
 max_value = 11.0
@@ -119,24 +103,18 @@ value = 4.7
 ticks_on_borders = true
 
 [node name="GreenBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 120.0
-margin_right = 300.0
-margin_bottom = 140.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 
 [node name="GreenLabel" type="Label" parent="Menu/GreenBlock"]
-margin_top = 3.0
-margin_right = 148.0
-margin_bottom = 17.0
-rect_min_size = Vector2( 148, 0 )
+custom_minimum_size = Vector2(148, 0)
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Green Freq/Phase:"
 
 [node name="GreenFrequency" type="HSlider" parent="Menu/GreenBlock"]
-margin_left = 152.0
-margin_right = 224.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 size_flags_horizontal = 3
 min_value = 0.1
 max_value = 6.0
@@ -145,10 +123,8 @@ value = 1.0
 ticks_on_borders = true
 
 [node name="GreenPhase" type="HSlider" parent="Menu/GreenBlock"]
-margin_left = 228.0
-margin_right = 300.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 size_flags_horizontal = 3
 min_value = 4.7
 max_value = 11.0
@@ -157,24 +133,18 @@ value = 4.7
 ticks_on_borders = true
 
 [node name="BlueBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 144.0
-margin_right = 300.0
-margin_bottom = 164.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 
 [node name="BlueLabel" type="Label" parent="Menu/BlueBlock"]
-margin_top = 3.0
-margin_right = 148.0
-margin_bottom = 17.0
-rect_min_size = Vector2( 148, 0 )
+custom_minimum_size = Vector2(148, 0)
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Blue Frequency/Phase:"
 
 [node name="BlueFrequency" type="HSlider" parent="Menu/BlueBlock"]
-margin_left = 152.0
-margin_right = 224.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 size_flags_horizontal = 3
 min_value = 0.1
 max_value = 6.0
@@ -183,10 +153,8 @@ value = 1.0
 ticks_on_borders = true
 
 [node name="BluePhase" type="HSlider" parent="Menu/BlueBlock"]
-margin_left = 228.0
-margin_right = 300.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 size_flags_horizontal = 3
 min_value = 4.7
 max_value = 11.0
@@ -196,48 +164,35 @@ ticks_on_borders = true
 
 [node name="GradientBlock" type="HBoxContainer" parent="Menu"]
 visible = false
-margin_top = 160.0
-margin_right = 300.0
-margin_bottom = 180.0
+layout_mode = 2
 
 [node name="GStart" type="ColorRect" parent="Menu/GradientBlock"]
-margin_right = 97.0
-margin_bottom = 20.0
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="GEnd" type="ColorRect" parent="Menu/GradientBlock"]
-margin_left = 101.0
-margin_right = 198.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 size_flags_horizontal = 3
-color = Color( 0, 0, 0, 1 )
+color = Color(0, 0, 0, 1)
 
 [node name="GAccent" type="ColorRect" parent="Menu/GradientBlock"]
-margin_left = 202.0
-margin_right = 300.0
-margin_bottom = 20.0
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="AccentPosBlock" type="HBoxContainer" parent="Menu"]
 visible = false
-margin_top = 160.0
-margin_right = 300.0
-margin_bottom = 180.0
+layout_mode = 2
 
 [node name="PositionLabel" type="Label" parent="Menu/AccentPosBlock"]
-margin_top = 3.0
-margin_right = 148.0
-margin_bottom = 17.0
-rect_min_size = Vector2( 148, 0 )
+custom_minimum_size = Vector2(148, 0)
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Accent Position:"
 
 [node name="AccentPosition" type="HSlider" parent="Menu/AccentPosBlock"]
-margin_left = 152.0
-margin_right = 300.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.05
@@ -245,24 +200,18 @@ ticks_on_borders = true
 
 [node name="WidthBlock" type="HBoxContainer" parent="Menu"]
 visible = false
-margin_top = 184.0
-margin_right = 300.0
-margin_bottom = 204.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 
 [node name="WidthLabel" type="Label" parent="Menu/WidthBlock"]
-margin_top = 3.0
-margin_right = 148.0
-margin_bottom = 17.0
-rect_min_size = Vector2( 148, 0 )
+custom_minimum_size = Vector2(148, 0)
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Accent Width:"
 
 [node name="AccentWidth" type="HSlider" parent="Menu/WidthBlock"]
-margin_left = 152.0
-margin_right = 300.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 size_flags_horizontal = 3
 max_value = 0.6
 step = 0.01
@@ -270,262 +219,179 @@ value = 0.05
 ticks_on_borders = true
 
 [node name="SmoothingBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 168.0
-margin_right = 300.0
-margin_bottom = 208.0
+layout_mode = 2
 
 [node name="SmoothingLabel" type="Label" parent="Menu/SmoothingBlock"]
-margin_top = 13.0
-margin_right = 148.0
-margin_bottom = 27.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Smooth (G)radient: "
-valign = 1
 
 [node name="Smoothing" type="CheckButton" parent="Menu/SmoothingBlock"]
-margin_left = 152.0
-margin_right = 300.0
-margin_bottom = 40.0
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="HSeparator" type="HSeparator" parent="Menu"]
-margin_top = 212.0
-margin_right = 300.0
-margin_bottom = 216.0
+layout_mode = 2
 
 [node name="FractalBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 220.0
-margin_right = 300.0
-margin_bottom = 250.0
-rect_min_size = Vector2( 0, 30 )
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
 
 [node name="Label" type="Label" parent="Menu/FractalBlock"]
-margin_top = 8.0
-margin_right = 97.0
-margin_bottom = 22.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Select Fractal: "
 
 [node name="Mandelbrot Button" type="Button" parent="Menu/FractalBlock"]
-margin_left = 101.0
-margin_right = 198.0
-margin_bottom = 30.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Mandelbrot"
 
 [node name="Julia Button" type="Button" parent="Menu/FractalBlock"]
-margin_left = 202.0
-margin_right = 300.0
-margin_bottom = 30.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Julia"
 
 [node name="ScaleBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 254.0
-margin_right = 300.0
-margin_bottom = 278.0
+layout_mode = 2
 
 [node name="ScaleLabel" type="Label" parent="Menu/ScaleBlock"]
-margin_top = 5.0
-margin_right = 148.0
-margin_bottom = 19.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Scale: "
 
 [node name="Scale" type="LineEdit" parent="Menu/ScaleBlock"]
-margin_left = 152.0
-margin_right = 300.0
-margin_bottom = 24.0
+layout_mode = 2
 size_flags_horizontal = 3
 caret_blink = true
 
 [node name="PositionBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 282.0
-margin_right = 300.0
-margin_bottom = 306.0
+layout_mode = 2
 
 [node name="PositionLabel" type="Label" parent="Menu/PositionBlock"]
-margin_top = 5.0
-margin_right = 148.0
-margin_bottom = 19.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Position: "
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu/PositionBlock"]
-margin_left = 152.0
-margin_right = 300.0
-margin_bottom = 24.0
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="PositionX" type="LineEdit" parent="Menu/PositionBlock/HBoxContainer"]
-margin_right = 72.0
-margin_bottom = 24.0
+layout_mode = 2
 size_flags_horizontal = 3
 caret_blink = true
 
 [node name="PositionY" type="LineEdit" parent="Menu/PositionBlock/HBoxContainer"]
-margin_left = 76.0
-margin_right = 148.0
-margin_bottom = 24.0
+layout_mode = 2
 size_flags_horizontal = 3
 caret_blink = true
 
 [node name="HSeparator2" type="HSeparator" parent="Menu"]
-margin_top = 310.0
-margin_right = 300.0
-margin_bottom = 314.0
+layout_mode = 2
 
 [node name="SeedBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 318.0
-margin_right = 300.0
-margin_bottom = 342.0
+layout_mode = 2
 
 [node name="SeedLabel" type="Label" parent="Menu/SeedBlock"]
-margin_top = 5.0
-margin_right = 148.0
-margin_bottom = 19.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "(S)eed: "
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Menu/SeedBlock"]
-margin_left = 152.0
-margin_right = 300.0
-margin_bottom = 24.0
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="SeedX" type="LineEdit" parent="Menu/SeedBlock/HBoxContainer"]
-margin_right = 72.0
-margin_bottom = 24.0
+layout_mode = 2
 size_flags_horizontal = 3
 caret_blink = true
 
 [node name="SeedY" type="LineEdit" parent="Menu/SeedBlock/HBoxContainer"]
-margin_left = 76.0
-margin_right = 148.0
-margin_bottom = 24.0
+layout_mode = 2
 size_flags_horizontal = 3
 caret_blink = true
 
 [node name="PowerBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 346.0
-margin_right = 300.0
-margin_bottom = 370.0
-custom_constants/separation = 5
+layout_mode = 2
+theme_override_constants/separation = 5
 
 [node name="PowerLabel" type="Label" parent="Menu/PowerBlock"]
-margin_top = 5.0
-margin_right = 147.0
-margin_bottom = 19.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "(P)ower: "
 
 [node name="Power" type="LineEdit" parent="Menu/PowerBlock"]
-margin_left = 152.0
-margin_right = 300.0
-margin_bottom = 24.0
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="IterationsBlock" type="HBoxContainer" parent="Menu"]
-margin_top = 374.0
-margin_right = 300.0
-margin_bottom = 398.0
+layout_mode = 2
 
 [node name="IterationsLabel" type="Label" parent="Menu/IterationsBlock"]
-margin_top = 5.0
-margin_right = 148.0
-margin_bottom = 19.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "(I)terations:"
 
 [node name="Iterations" type="LineEdit" parent="Menu/IterationsBlock"]
-margin_left = 152.0
-margin_right = 300.0
-margin_bottom = 24.0
+layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="FPS Block" type="HBoxContainer" parent="Menu"]
-margin_top = 402.0
-margin_right = 300.0
-margin_bottom = 426.0
-rect_min_size = Vector2( 0, 24 )
-
-[node name="FPSLabel" type="Label" parent="Menu/FPS Block"]
-margin_top = 5.0
-margin_right = 148.0
-margin_bottom = 19.0
-size_flags_horizontal = 3
-text = "FPS:"
-valign = 1
-
-[node name="FPS" type="Label" parent="Menu/FPS Block"]
-margin_left = 152.0
-margin_top = 5.0
-margin_right = 300.0
-margin_bottom = 19.0
-size_flags_horizontal = 3
-text = "0"
 
 [node name="HSeparator3" type="HSeparator" parent="Menu"]
-margin_top = 430.0
-margin_right = 300.0
-margin_bottom = 434.0
+layout_mode = 2
 
 [node name="Instructions" type="RichTextLabel" parent="Menu"]
-margin_top = 438.0
-margin_right = 300.0
-margin_bottom = 653.0
-rect_min_size = Vector2( 300, 215 )
-text = "															 Controls
-Esc/RMouse     Show/Hide this menu
-CTRL+q		     Exit Program
-f				        Full screen on/off 
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 15
+text = "Esc/RMB      Show/Hide this menu
+CTRL+q        Exit Program
+f                     Full screen on/off 
 g		     		  Smoothing on/off
-LMouse+Drag   Pan screen
+LMB+Drag   Pan screen
 Wheel		      Zoom
-p/P			       +/- Power
-i/I				     +/- Iterations
-															Julia Only
-s			      Mouse adjusts seed on/off
-SHIFT           Slow seed adjustment to 1/3rd
-CTRL            Slow seed adjustment to 1/10th"
+p/P			      +/- Power
+i/I				      +/- Iterations
+--- Julia Only ---
+s			  Mouse adjusts seed on/off
+SHIFT    Slow seed adjustment to 1/3rd
+CTRL     Slow seed adjustment to 1/10th"
 
 [node name="PickPanel" type="Panel" parent="."]
 visible = false
-self_modulate = Color( 1, 1, 1, 0.784314 )
-margin_left = 321.0
-margin_right = 631.0
-margin_bottom = 513.0
-rect_min_size = Vector2( 200, 200 )
+self_modulate = Color(1, 1, 1, 0.784314)
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = 321.0
+offset_right = 631.0
+offset_bottom = 513.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PickPanel"]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 290.0
-margin_bottom = 462.0
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 290.0
+offset_bottom = 462.0
 
 [node name="ClosePicker" type="Button" parent="PickPanel/VBoxContainer"]
-margin_right = 290.0
-margin_bottom = 20.0
+layout_mode = 2
 size_flags_horizontal = 3
 text = "Close Panel"
 
 [node name="HSeparator3" type="HSeparator" parent="PickPanel/VBoxContainer"]
-margin_top = 24.0
-margin_right = 290.0
-margin_bottom = 44.0
-rect_min_size = Vector2( 0, 20 )
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 
 [node name="ColorPicker" type="ColorPicker" parent="PickPanel/VBoxContainer"]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 4.0
-margin_bottom = 4.0
+layout_mode = 2
 size_flags_horizontal = 3
 edit_alpha = false
+
 [connection signal="pressed" from="Menu/HBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
 [connection signal="pressed" from="Menu/HBoxContainer/HideButton" to="." method="_on_HideButton_pressed"]
 [connection signal="toggled" from="Menu/FullScreenBlock/FullScreen" to="." method="_on_FullScreen_toggled"]
-[connection signal="value_changed" from="Menu/ColorBlock/ColorMethod" to="." method="_on_ColorMethod_value_changed"]
+[connection signal="toggled" from="Menu/ColorBlock/ColorMethod" to="." method="_on_ColorMethod_toggled"]
 [connection signal="value_changed" from="Menu/RedBlock/RedFrequency" to="." method="_on_RedFrequency_value_changed"]
 [connection signal="value_changed" from="Menu/RedBlock/RedPhase" to="." method="_on_RedPhase_value_changed"]
 [connection signal="value_changed" from="Menu/GreenBlock/GreenFrequency" to="." method="_on_GreenFrequency_value_changed"]

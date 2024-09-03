@@ -1,22 +1,21 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://b6irv6agle2c4"]
 
-[ext_resource path="res://materials/julia.material" type="Material" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Game.gd" type="Script" id=3]
-[ext_resource path="res://UI.tscn" type="PackedScene" id=4]
+[ext_resource type="Material" uid="uid://dif05f388unwv" path="res://materials/julia.material" id="1"]
+[ext_resource type="Texture2D" uid="uid://bxy11k0l3u8pn" path="res://icon.png" id="2"]
+[ext_resource type="Script" path="res://Game.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://dxas8w6rr810e" path="res://UI.tscn" id="4"]
 
 [node name="Game" type="Node"]
-script = ExtResource( 3 )
+script = ExtResource("3")
 
 [node name="Panel" type="TextureRect" parent="."]
-material = ExtResource( 1 )
+material = ExtResource("1")
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = 6.10352e-05
-texture = ExtResource( 2 )
-stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_bottom = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2")
 
-[node name="UI" parent="." instance=ExtResource( 4 )]
+[node name="UI" parent="." instance=ExtResource("4")]

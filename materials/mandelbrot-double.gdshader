@@ -3,7 +3,7 @@ shader_type canvas_item;
 /* This experimental code attempts to emulate double precision. It runs and slows the 
 frame rate way down, but does not appear to provide any more resolution for the mandelbrot. */
 
-uniform int   color_scheme = 1;
+uniform int   color_method = 0;
 uniform int   smoothing = 0;
 
 uniform highp float scale = 86566.;
@@ -145,7 +145,7 @@ highp vec2 c_pow(highp vec2 base, highp float ex) { // Calculate base ^ exponent
 /****** Color functions ******/
 
 vec4 getColor(float i) {
-	if(color_scheme == 1) {
+	if(color_method == 0) {
 		/* Sin/Cos creates a smooth wave between 1 and -1, offset from each other. 
 		*  You can have 4 evenly distributed offsets from sin, cos, -sin, -cos
 		*  (sin(x) +1) / 2 -> changes the wave to go between 0 and 1 with the same frequency, +2../4 will go from 0.5 and 1.0
@@ -156,11 +156,11 @@ vec4 getColor(float i) {
 	                    (sin(5.4*i)+1.0)/2.0,
 	                    1.0);	
 	}
-	if(color_scheme == 2) 
+	if(color_method == 1) 
 		return vec4(i, 0.0, 0.0, 1.0);
-	if(color_scheme == 3) 
+	if(color_method == 2) 
 		return vec4(0.0, i, 0.0, 1.0);	
-	else //if(color_scheme == 4) 
+	else //if(color_method == 3) 
 		return vec4(0.0, 0.0, i, 1.0);
 
 }

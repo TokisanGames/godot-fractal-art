@@ -1,10 +1,10 @@
 shader_type canvas_item;
 
-uniform int   color_method = 1;
-uniform int   smoothing = 0;
-uniform vec4  gradient_start : hint_color = vec4(0.18, 0., 0.45, 1.);
-uniform vec4  gradient_end : hint_color = vec4(1., 1., 0., 1.);
-uniform vec4  gradient_accent : hint_color = vec4(1., 1., 0., 1.);
+uniform int   color_method = 0;
+uniform int   smoothing = 1;
+uniform vec4  gradient_start : source_color = vec4(0.18, 0., 0.45, 1.);
+uniform vec4  gradient_end : source_color = vec4(1., 1., 0., 1.);
+uniform vec4  gradient_accent : source_color = vec4(1., 1., 0., 1.);
 uniform float accent_position = 0.65;
 uniform float accent_width = 0.34;
 uniform float red_frequency=1.6615;
@@ -15,10 +15,11 @@ uniform float green_phase=6.3;
 uniform float blue_phase=6.3;
 
 
-uniform highp float scale = 0.36;
-uniform highp vec2  position = vec2(0.75, 0.0);
+uniform highp float scale = 0.5;
+uniform highp vec2  position = vec2(0.0, 0.0);
 uniform float aspect_ratio = 1.778;
 
+uniform highp vec2 seed = vec2(-0.794084, 0.136444);
 uniform float power = 2.0;
 uniform float iterations = 50.0;
 uniform float escape = 4.0;
@@ -58,7 +59,7 @@ vec4 alpha_blend (vec4 top, vec4 bot) {
 
 
 vec4 getColor(float i) {
-	if(color_method == 2) {
+	if(color_method == 1) {
 		vec4 ramp;
 		vec4 accent;
 
@@ -94,31 +95,30 @@ vec4 getColor(float i) {
 
 
 /****** Fragement Main ******/
-// Mandelbrot is z^2+C	
 
-void fragment() {
+void fragment() {	
 	float i = 0.0;
 	
-	highp vec2 c;
-	c.x = aspect_ratio * (UV.x - 0.5) / scale - position.x;
-	c.y = (UV.y - 0.5) / scale + position.y;
-
-	highp vec2 z = c;
-		
+	highp vec2 c = seed;
+	
+	highp vec2 z;
+	z.x = aspect_ratio * (UV.x - 0.5) / scale - position.x;
+	z.y = (UV.y - 0.5) / scale + position.y;
+	
 	if(power==2.0)
 		while( i<iterations && length(z) <= escape ) { 
 			z = vec2(z.x*z.x - z.y*z.y, power*z.x*z.y) + c;		//20fps
 			i++;		
-		}
+		}		
 	else
 		while( i<iterations && length(z) <= escape ) { 
 			z = c_pow(z, power) + c;							//6-7fps				
 			i++;	
 		}
 
-		
+
 	vec4 color;
-	
+
 	if (i >= iterations) 
 		color = vec4(0.0, 0.0, 0.0, 1.0);
 	else { 
